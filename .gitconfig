@@ -1,0 +1,30 @@
+[user]
+	name = Tejas-Nanaware
+	email = nanawaret@hotmail.com
+[color]
+	ui = true
+	branch = auto
+	diff = auto
+	status = auto
+[apply]
+	whitespace = nowarn
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[core]
+	excludesfile = /Users/tejas/.gitexcludes
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f

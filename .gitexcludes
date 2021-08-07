@@ -1,0 +1,11 @@
+.DS_Store
+.vscode
+.ipynb_checkpoints
+__pycache__
+.nosync
+.idea
+~$*.doc*
+~$*.xls*
+~$*.ppt*
+*.icloud
+

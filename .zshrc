@@ -15,9 +15,11 @@ PROMPT='${fg[blue]}%n@%m%{$reset_color%} %c ${fg[yellow]}${vcs_info_msg_0_}%{$re
 
 # Git aliases
 alias gst='git status'
-alias gpom='git push origin master'
+alias gpom='git push origin main'
 alias ga='git add .'
 alias gc='git commit'
+alias gf='git fetch'
+alias gbv='git branch -v'
 
 # Other aliases
 alias jn='jupyter notebook'

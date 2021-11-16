@@ -10,7 +10,13 @@ export PS1='\W\[\033[0;33m\]$(__git_ps1)\[\033[0m\]\$ '
 
 # Git aliases
 alias gst='git status'
-alias gpom='git push origin master'
+alias gpom='git push origin main'
 alias ga='git add .'
 alias gc='git commit'
+alias gf='git fetch'
+alias gbv='git branch -v'
+
+# Other aliases
+alias jn='jupyter notebook'
+alias pinga='ping www.google.com'
 alias ll='ls -l'

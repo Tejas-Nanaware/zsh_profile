@@ -15,8 +15,13 @@ alias ga='git add .'
 alias gc='git commit'
 alias gf='git fetch'
 alias gbv='git branch -v'
+alias gitecm='git commit -m "empty commit to trigger pipelines"'
 
 # Other aliases
 alias jn='jupyter notebook'
 alias pinga='ping www.google.com'
 alias ll='ls -l'
+alias run_pytest='coverage run -m pytest'
+alias pytest_report='coverage report --show-missing'
+
+conda activate base

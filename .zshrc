@@ -1,6 +1,7 @@
 # Load git prompt
 . ~/zsh_profile/git-prompt.sh
 
+# Set git prompt variables
 GIT_PS1_SHOWDIRTYSTATE="yes"
 GIT_PS1_SHOWSTASHSTATE="yes"
 GIT_PS1_SHOWUNTRACKEDFILES="yes"

@@ -1,9 +1,15 @@
 # Adding bash profile for terminals on AWS SageMaker that shows git branches on the terminal with color
 # The source uses git-prompt.sh created by Shawn O. Pearce https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
 
-# Set source to get the git prompt
-source ~/zsh_profile/git-prompt.sh
-GIT_PS1_SHOWDIRTYSTATE=true
+# Load git prompt
+. ~/zsh_profile/git-prompt.sh
+
+# Set git prompt variables
+GIT_PS1_SHOWDIRTYSTATE="yes"
+GIT_PS1_SHOWSTASHSTATE="yes"
+GIT_PS1_SHOWUNTRACKEDFILES="yes"
+GIT_PS1_SHOWCONFLICTSTATE="yes"
+# GIT_PS1_SHOWUPSTREAM="auto" # Set this to true if you want to know the if remote branch is ahead or behind
 
 # export PS1='\u@\h -> \W\[\033[0;33m\]$(__git_ps1)\[\033[0m\]\$ '
 export PS1='\W\[\033[0;33m\]$(__git_ps1)\[\033[0m\]\$ '
@@ -22,4 +28,4 @@ alias jn='jupyter notebook'
 alias pinga='ping www.google.com'
 alias ll='ls -l'
 alias run_pytest='coverage run -m pytest'
-alias pytest_report='coverage report --show-missing'
+alias pytest_report='coverage report --show-missing --omit="tests/*"'

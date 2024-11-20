@@ -1,3 +1,11 @@
+# Load git prompt
+. ~/zsh_profile/git-prompt.sh
+
+GIT_PS1_SHOWDIRTYSTATE="yes"
+GIT_PS1_SHOWSTASHSTATE="yes"
+GIT_PS1_SHOWUNTRACKEDFILES="yes"
+GIT_PS1_SHOWCONFLICTSTATE="yes"
+
 # Load colors
 autoload -U colors && colors
 
@@ -10,8 +18,7 @@ zstyle ':vcs_info:git:*' formats '(%b)'
 
 # Set up the prompt (with git branch name)
 setopt PROMPT_SUBST
-# PROMPT='%n@%m %c ${vcs_info_msg_0_}\$'
-PROMPT='${fg[blue]}%n@%m%{$reset_color%} %c ${fg[yellow]}${vcs_info_msg_0_}%{$reset_color%} \$'
+PROMPT='${fg[blue]}%n@%m%{$reset_color%} %c ${fg[yellow]}$(__git_ps1 "(%s)")%{$reset_color%} \$'
 
 # Git aliases
 alias gst='git status'
@@ -22,9 +29,14 @@ alias gf='git fetch'
 alias gbv='git branch -v'
 
 # Other aliases
-alias jn='jupyter notebook'
+alias jl='jupyter lab'
 alias pinga='ping www.google.com'
 alias ll='ls -l'
+
+# Google Cloud SDK aliases
+alias gclogin='gcloud auth login'
+alias gcadlogin='gcloud auth application-default login'
+alias gclogins='gcloud auth login && gcloud auth application-default login'
 
 # Increase History Storage
 HISTFILESIZE=1000000000 HISTSIZE=1000000

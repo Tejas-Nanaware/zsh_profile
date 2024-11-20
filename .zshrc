@@ -5,6 +5,7 @@ GIT_PS1_SHOWDIRTYSTATE="yes"
 GIT_PS1_SHOWSTASHSTATE="yes"
 GIT_PS1_SHOWUNTRACKEDFILES="yes"
 GIT_PS1_SHOWCONFLICTSTATE="yes"
+# GIT_PS1_SHOWUPSTREAM="auto" # Set this to true if you want to know the if remote branch is ahead or behind
 
 # Load colors
 autoload -U colors && colors

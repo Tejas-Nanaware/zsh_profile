@@ -7,7 +7,6 @@ Here is how the terminal looks like.
 
 # Installation
 To install, clone the repo, open the `Solarized Dark.terminal` file and go to preferences to make it as default.  
-Copy the contents from `repo/.zshrc` to `~/.zshrc`.  
-Copy the contents from `repo/.gitconfig` to `~/.gitconfig`.  
-Copy the file from `repo/.gitexcludes` to `~/`.  
+Clone the repo in the _home_ `~` folder.
+Add `source ~/zsh_profile/.zshrc` in your `~/.zshrc`
 Restart the terminal.  
